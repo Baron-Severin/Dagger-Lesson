@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="baron.severin.daggerlesson">
 
+    <!-- TODO to switch between manual and automatic, change application name, then set correct activity to launcher -->
+    <!-- Manual: android:name=".manual.ManualApp" -->
+    <!-- Automatic: android:name=".automatic.AutoApp" -->
     <application
         android:name=".manual.ManualApp"
         android:allowBackup="true"
@@ -14,14 +17,16 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <!-- Uncomment this to launch here -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".automatic.AutomaticActivity">
+        <activity android:name=".automatic.AutoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- Uncomment this to launch here -->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
     </application>

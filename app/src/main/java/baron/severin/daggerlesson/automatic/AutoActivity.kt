@@ -4,13 +4,17 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import baron.severin.daggerlesson.R
 import baron.severin.daggerlesson.Repo
+import javax.inject.Inject
 
-class AutomaticActivity : AppCompatActivity() {
+class AutoActivity : AppCompatActivity() {
 
-    lateinit var repo : Repo
+    @Inject lateinit var repo : Repo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_automatic)
+        val component = DaggerAutoComponent.create()
+        component.inject(this)
+        println("Injected")
     }
 }

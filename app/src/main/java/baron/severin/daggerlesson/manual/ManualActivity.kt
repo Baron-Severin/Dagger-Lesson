@@ -12,5 +12,8 @@ class ManualActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val component = ManualComponent()
+        component.inject(this)
+        println("Injected")
     }
 }

@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="baron.severin.daggerlesson.automatic.AutomaticActivity">
+    tools:context="baron.severin.daggerlesson.automatic.AutoActivity">
 
 </android.support.constraint.ConstraintLayout>
