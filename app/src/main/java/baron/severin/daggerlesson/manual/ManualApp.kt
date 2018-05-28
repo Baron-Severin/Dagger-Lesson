@@ -4,4 +4,6 @@ import android.app.Application
 
 class ManualApp : Application() {
 
+    val component = ManualComponent()
+
 }

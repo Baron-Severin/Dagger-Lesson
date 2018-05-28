@@ -13,7 +13,7 @@ class AutoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_automatic)
-        val component = DaggerAutoComponent.create()
+        val component = (application as AutoApp).component
         component.inject(this)
         println("Injected")
     }

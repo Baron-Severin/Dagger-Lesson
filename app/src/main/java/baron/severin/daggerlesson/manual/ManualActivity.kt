@@ -12,7 +12,7 @@ class ManualActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val component = ManualComponent()
+        val component = (application as ManualApp).component
         component.inject(this)
         println("Injected")
     }

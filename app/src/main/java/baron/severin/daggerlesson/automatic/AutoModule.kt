@@ -5,10 +5,11 @@ import baron.severin.daggerlesson.Cache
 import baron.severin.daggerlesson.Repo
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module class AutoModule {
 
-    @Provides fun providesRepo(api: Api, cache: Cache) : Repo {
+    @Provides @Singleton fun providesRepo(api: Api, cache: Cache) : Repo {
         return Repo(api, cache)
     }
 
